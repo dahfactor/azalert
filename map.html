@@ -43,6 +43,8 @@
                 .openPopup();
         }
 
+        initMap("12.392576", "121.985294");
+
         function updatePosition(position) {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
@@ -74,15 +76,15 @@
         }
 
         // Initial location check and set up watch
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                updatePosition(position);
-                // Start watching the position
-                navigator.geolocation.watchPosition(updatePosition, handleError);
-            }, handleError);
-        } else {
-            alert("Geolocation is not supported by this browser.");
-        }
+        // if (navigator.geolocation) {
+        //     navigator.geolocation.getCurrentPosition((position) => {
+        //         updatePosition(position);
+        //         // Start watching the position
+        //         navigator.geolocation.watchPosition(updatePosition, handleError);
+        //     }, handleError);
+        // } else {
+        //     alert("Geolocation is not supported by this browser.");
+        // }
     </script>
 </body>
 </html>
